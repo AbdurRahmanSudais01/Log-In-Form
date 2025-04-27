@@ -22,7 +22,7 @@ document.getElementById("loginForm")?.addEventListener("submit", function(event)
     }
     localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser))
     event.target.reset();
-    window.location.href = "home.html";
+    window.location.href = "otherPages/home.html";
 
 
 
