@@ -1,5 +1,10 @@
 // login Page
 
+window.onload = function(){
+    if (localStorage.getItem("isLoggedIn") === "true"){
+        window.location.href = "otherPages/home.html";
+    }
+}
 document.getElementById("loginForm")?.addEventListener("submit", function(event){
     event.preventDefault();
 
@@ -21,6 +26,7 @@ document.getElementById("loginForm")?.addEventListener("submit", function(event)
         return;
     }
     localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser))
+    localStorage.setItem("IsLoggedIn", "true");
     event.target.reset();
     window.location.href = "otherPages/home.html";
 
